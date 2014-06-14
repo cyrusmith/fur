@@ -79,7 +79,7 @@ JHTML::_('behavior.framework', true);
 			</a>
                 </div>
             <?php endif; ?>
-		<div class="slogan"><?php if ($this->params->get( 'slogandisable' )) : ?><?php echo ($slogan); ?><?php endif; ?></div>
+		<div class="slogan"><?php if ($this->params->get( 'slogandisable' )) : ?><a href="<?php echo $this->baseurl ?>/"><?php echo ($slogan); ?><?php endif; ?></a></div>
             <?php
             if ($this->countModules('top')) : ?>
                 <div class="top">
@@ -147,7 +147,13 @@ JHTML::_('behavior.framework', true);
 <?php endif; ?>
 <?php } ?>
 <!-- END Slideshow -->
-<div class="clearpad"><jdoc:include type="component" /> </div></div>
+    <?php
+    if ($this->countModules('position-7')) : ?>
+        <jdoc:include type="modules" name="position-7"/>
+    <?php endif; ?>
+<div class="clearpad">
+    <jdoc:include type="component" />
+</div></div>
     <?php if($this->countModules('right') and JRequest::getCmd('layout') != 'form') : ?>
 <div id="rightbar-w">
     <div id="sidebar">

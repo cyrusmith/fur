@@ -1,0 +1,104 @@
+.triggers {
+  .descriptor_img {
+    width: 300px;
+    float: left;
+    margin-left: 50px;
+  }
+  .descriptor_text {
+    padding-top: 3em;
+    h1 {
+      color: $titleColor;
+      font: {
+        size: 2em
+      }
+    }
+    margin-left: 400px;
+    ul {
+      margin-left: -2.2em;
+      padding: 2em 0;
+      li {
+        padding: .5em 0;
+        padding-left: 32px;
+        background: {
+          image: url(../images/check.png);
+          repeat: no-repeat;
+          position: 0 50%;
+        }
+        ;
+      }
+    }
+  }
+
+  .howitworks {
+    clear: both;
+    padding: 2em 0;
+    width: 480px;
+    margin: 0 auto;
+    h2 {
+      text-align: center;
+    }
+    blockquote {
+      margin: .5em 0 0 2em;
+    }
+    .knowmore {
+      display: block;
+      padding: .5em 0;
+      text-align: right;
+      text-decoration: none;
+      span {
+        border-bottom: 1px dashed $linkColor;
+      }
+
+      &:hover {
+        span {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .compare {
+    clear: both;
+    width: 800px;
+    margin: 0 auto;
+    table {
+      &, td, th, tr {
+        border: none;
+        padding: 0;
+      }
+      .col1, .col2 {
+        width: 280px;
+      }
+      th {
+        vertical-align: middle;
+        img {
+          float: left;
+        }
+        span {
+          display: block;
+          float: left;
+          height: 120px;
+          line-height: 120px;
+        }
+        &.col1 {
+          span, img {
+            float: right;
+          }
+        }
+        font: {
+          weight: bold;
+          size: 1.2em;
+        }
+        &.sep {
+          font-size: 1em;
+          text-align: center;
+          span {
+            float: none;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+}
